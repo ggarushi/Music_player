@@ -21,8 +21,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  @override
+  double sliderValue=2;
   Widget build(BuildContext context) {
     double height=MediaQuery.of(context).size.height;
     return Scaffold(
@@ -38,8 +44,31 @@ class Home extends StatelessWidget {
                 itemCount:3,
                 scrollDirection: Axis.horizontal,
             )
-          )
-        ]
+          ),
+          Text("On My Way",style:TextStyle(fontSize: 30,fontWeight: FontWeight.w500,color:Theme.of(context).accentColor)),
+          Text('Alan Walker',style:TextStyle( fontSize: 20,
+              fontWeight: FontWeight.w400,
+              color:Theme.of(context).accentColor )),
+      SliderTheme(data: SliderThemeData(
+          trackHeight: 8,
+          thumbShape: RoundSliderThumbShape(enabledThumbRadius:6)
+      ), child: Slider(
+        min:0,
+        max:20,
+        value:sliderValue,
+        activeColor: Theme.of(context).primaryColorDark,
+        inactiveColor: Theme.of(context).primaryColorDark.withOpacity(0.4),
+        onChanged: (value){
+          setState(() {
+            sliderValue=value;
+          });
+
+        },
+
+
+      )
+      ),
+        ],
       )
     );
   }
