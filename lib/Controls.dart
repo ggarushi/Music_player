@@ -8,16 +8,29 @@ class PlayerControls extends StatelessWidget {
         children: <Widget>[
           Control(
             icon: Icons.repeat,
+//            high:60,
+//            wide:60
           ),
           Control(
             icon: Icons.skip_previous,
+//              high:60,
+//              wide:60
           ),
 //          PlayControl(),
           Control(
+              icon: Icons.play_arrow,
+              high:100,
+              wide:100
+          ),
+          Control(
             icon: Icons.skip_next,
+//              high:60,
+//              wide:60
           ),
           Control(
             icon: Icons.shuffle,
+//              high:60,
+//              wide:60
           ),
         ],
       ),
@@ -26,12 +39,14 @@ class PlayerControls extends StatelessWidget {
 }
 class Control extends StatelessWidget {
   final IconData icon;
-  const Control({this.icon});
+  final double high;
+  final double wide;
+  const Control({this.icon,this.high=60,this.wide=60});
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
-      width: 60,
+      height: high,
+      width: wide,
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColor,
         shape: BoxShape.circle,
@@ -72,7 +87,7 @@ class Control extends StatelessWidget {
     ),
     Center(
     child: Container(
-    margin: EdgeInsets.all(10),
+    margin: EdgeInsets.all(11),
     decoration:
     BoxDecoration(color: Theme.of(context).primaryColor, shape: BoxShape.circle),
     child: Center(
