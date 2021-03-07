@@ -78,7 +78,8 @@ class Control extends StatelessWidget {
                 spreadRadius: 3,
                 blurRadius: 10),
             BoxShadow(
-                color: Theme.of(context).primaryColorDark,
+//                color: Theme.of(context).primaryColorDark,
+            color:Colors.grey,
                 offset: Offset(-3, -4),
                 spreadRadius: -2,
                 blurRadius: 20)
