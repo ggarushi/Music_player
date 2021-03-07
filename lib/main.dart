@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'navbar.dart';
 import 'Album.dart';
+import 'Controls.dart';
 void main() {
   runApp(MyApp());
 }
@@ -68,6 +69,7 @@ class _HomeState extends State<Home> {
 
       )
       ),
+          PlayerControls()
         ],
       )
     );
