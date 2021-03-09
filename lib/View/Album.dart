@@ -6,7 +6,7 @@ class Album extends StatelessWidget {
       height: 260,
         width:260,
         padding:EdgeInsets.all(15),
-        margin: EdgeInsets.symmetric(horizontal:40,vertical:25),
+        margin: EdgeInsets.symmetric(horizontal:40,vertical:20),
       child:ClipRRect(
           borderRadius: BorderRadius.circular(20),
         child:Image.network('https://i.ytimg.com/vi/dhYOPzcsbGM/maxresdefault.jpg',fit:BoxFit.fill)

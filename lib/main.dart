@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'navbar.dart';
-import 'Album.dart';
+import 'View/navbar.dart';
+import 'View/Album.dart';
 import 'Controls.dart';
 void main() {
   runApp(MyApp());
@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
             theme:ThemeData(
               primaryColor: Color(0xffbca89b),
+//
               accentColor: Colors.white,
               primaryColorDark: Color (0xff6f3d2e),
 
@@ -47,7 +48,7 @@ class _HomeState extends State<Home> {
                 scrollDirection: Axis.horizontal,
             )
           ),
-          Text("On My Way",style:TextStyle(fontSize: 30,fontWeight: FontWeight.w500,color:Theme.of(context).accentColor)),
+          Text("On My Way",style:TextStyle(fontSize: 25,fontWeight: FontWeight.w500,color:Theme.of(context).accentColor)),
           Text('Alan Walker',style:TextStyle( fontSize: 20,
               fontWeight: FontWeight.w400,
               color:Theme.of(context).accentColor )),
