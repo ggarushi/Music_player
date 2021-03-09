@@ -35,6 +35,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body:Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children:<Widget>[
           Navbar(),
           Container(
